@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+{{ config('app.name') }} - {{$storie->titre}}
+@stop
+
 @section('content')
 <div id="grillestories">
       <ul id="grid2">

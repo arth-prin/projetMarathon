@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+{{ config('app.name') }} - Se connecter
+@stop
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

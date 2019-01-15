@@ -4,13 +4,17 @@
 
 @extends('layouts.app')
 
+@section('title')
+{{ config('app.name') }} - Créer une histoire
+@stop
+
 @section('content')
 
 <div class="formulaire">
     <form action="{{route('enregistrer_histoire')}}" method="POST">
         {!! csrf_field() !!}
         <div class="text-center" style="margin-top: 2rem">
-            <h3><i class="far fa-edit"></i> Crée ton histoire</h3>
+            <h3><i class="far fa-edit"></i> Créer une histoire</h3>
             <hr class="mt-2 mb-2">
         </div>
 

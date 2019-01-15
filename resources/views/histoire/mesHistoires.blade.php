@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+{{ config('app.name') }} - Mes Histoires
+@stop
+
 @section('content')
 <div class="grandtitre"> Mes Histoires</div>
 <div  id="grillestories">

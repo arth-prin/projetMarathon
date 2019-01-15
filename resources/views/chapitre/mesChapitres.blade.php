@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\DB;
 
 @extends('layouts.app')
 
+@section('title')
+{{ config('app.name') }} - Édition "{{$histoire->titre}}"
+@stop
+
 @section('content')
 
 <!-- <ul>
@@ -95,9 +99,6 @@ use Illuminate\Support\Facades\DB;
                 <input type="radio" name="premier" value="0">
             </label>
         </div>
-        <label class="col-md-2 form-control-label" for="select">
-            <strong>Accomplie ?</strong>
-        </label>
     </div>
     <br>
       * champ obligatoire
@@ -110,7 +111,7 @@ use Illuminate\Support\Facades\DB;
 <br>
 <br>
 <br>
-{{$histoire->id}}
+
 <form action='{{route('enregistrer_liaison', ['histoire_id' => $histoire->id])}}' method='POST'>
     @csrf
     <h3>Lier les chapitres</h3>
